@@ -25,3 +25,11 @@ export const getUmaTarefa = id => {
     });
   };
 };
+
+export const saveTarefa = tarefa => {
+  api.salvarTarefa(tarefa).then(res => {
+    if (res.status === 200) {
+      console.log('Salvou!');
+    }
+  });
+};
