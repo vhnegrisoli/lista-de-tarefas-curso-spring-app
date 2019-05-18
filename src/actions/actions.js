@@ -1,6 +1,5 @@
 import * as actionTypes from '../actions/actionTypes';
 import * as api from '../actions/api';
-import { dispatch } from 'rxjs/internal/observable/range';
 
 export const getTarefas = () => {
   return dispatch => {

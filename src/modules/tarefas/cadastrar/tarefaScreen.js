@@ -2,9 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 
-import * as actions from '../../actions/actions';
+import * as actions from '../../../actions/actions';
 
-import './tarefaForm';
+import tarefaForm from './tarefaForm';
 import tarefaForm from './tarefaForm';
 
 export class tarefaScreen extends React.Component {
@@ -17,7 +17,7 @@ export class tarefaScreen extends React.Component {
     actions.saveTarefa(values);
   };
 
-  initialize() {}
+  initialize() { }
 
   render() {
     return <tarefaForm {...this.props} onSubmit={this.onSubmit.bind(this)} />;
@@ -27,10 +27,8 @@ export class tarefaScreen extends React.Component {
 tarefaScreen.propTypes = {};
 
 const mapStateToProps = (state, props) => {
-    return {
-        initialValues:
-        isLoading: state.
-    }
+  return {
+  }
 };
 
 export default connect(

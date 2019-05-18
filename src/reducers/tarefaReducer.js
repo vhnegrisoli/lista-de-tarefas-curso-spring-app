@@ -6,7 +6,7 @@ const initialState = {
   tarefa: null,
 };
 
-export const tarefaReducer = (state = initialState, action) => {
+export default function tarefaReducer(state = initialState, action) {
   switch (action.type) {
     case actionTypes.FETCH_TAREFAS_SUCCESS:
       return {
