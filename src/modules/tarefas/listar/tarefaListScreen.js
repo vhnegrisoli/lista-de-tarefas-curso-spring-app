@@ -8,10 +8,13 @@ import { getTarefas } from '../../../actions/actions';
 
 const formName = 'tarefasListForm'
 
-export class tarefaListScreen extends React.Component {
+export class TarefaListScreen extends React.Component {
     constructor(props) {
         super(props);
-        this.initialize();
+        this.initialize()
+    }
+
+    initialize() {
         this.props.getTarefas();
     }
 
@@ -20,13 +23,13 @@ export class tarefaListScreen extends React.Component {
     }
 }
 
-const mapStateToProps = (state, props) => {
+const mapStateToProps = (state) => {
     return {
         isLoading: state.tarefas.isLoading,
         tarefas: state.tarefas.tarefas,
     }
 };
-tarefaListScreen.propTypes = {
+TarefaListScreen.propTypes = {
     getTarefas: PropTypes.func.isRequired,
 }
 
@@ -36,4 +39,4 @@ const form = reduxForm({
 export default connect(
     mapStateToProps,
     { getTarefas },
-)(form(tarefaListScreen));
+)(form(TarefaListScreen));

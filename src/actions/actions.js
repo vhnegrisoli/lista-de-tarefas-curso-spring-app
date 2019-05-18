@@ -1,7 +1,7 @@
 import * as actionTypes from '../actions/actionTypes';
 import * as api from '../actions/api';
 
-export const getTarefas = () => {
+export function getTarefas() {
   return dispatch => {
     api.getTarefas().then(res => {
       if (res.status === 200) {

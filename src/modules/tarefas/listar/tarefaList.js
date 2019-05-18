@@ -6,18 +6,24 @@ const TarefaList = ({ isLoading, tarefas }) => (
     <div className="container">
         <div className="card">
             <div className="card-body">
-                <h5 className="card-title">Listagem de Tarefas</h5>
+                <h2 className="card-title">Listagem de Tarefas</h2>
                 {tarefas && (
                     <table className="table">
                         <tr>
                             <th>
-                                Col 1
+                                Código
                          </th>
                             <th>
-                                Col 2
+                                Tarefa
                          </th>
                             <th>
-                                Col 3
+                                Status
+                         </th>
+                            <th>
+                                Categoria
+                         </th>
+                            <th>
+                                Usuário Responsável
                          </th>
                         </tr>
                         {tarefas.map(
