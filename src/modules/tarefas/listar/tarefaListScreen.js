@@ -16,6 +16,7 @@ export class TarefaListScreen extends React.Component {
 
     initialize() {
         this.props.getTarefas();
+        console.log(this)
     }
 
     render() {
@@ -36,6 +37,7 @@ TarefaListScreen.propTypes = {
 const form = reduxForm({
     form: formName,
 });
+
 export default connect(
     mapStateToProps,
     { getTarefas },

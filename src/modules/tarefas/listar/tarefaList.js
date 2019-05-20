@@ -9,23 +9,25 @@ const TarefaList = ({ isLoading, tarefas }) => (
                 <h2 className="card-title">Listagem de Tarefas</h2>
                 {tarefas && (
                     <table className="table">
-                        <tr>
-                            <th>
-                                Código
+                        <tbody>
+                            <tr>
+                                <th>
+                                    Código
                          </th>
-                            <th>
-                                Tarefa
+                                <th>
+                                    Tarefa
                          </th>
-                            <th>
-                                Status
+                                <th>
+                                    Status
                          </th>
-                            <th>
-                                Categoria
+                                <th>
+                                    Categoria
                          </th>
-                            <th>
-                                Usuário Responsável
+                                <th>
+                                    Usuário Responsável
                          </th>
-                        </tr>
+                            </tr>
+                        </tbody>
                         {tarefas.map(
                             tarefa => (
                                 <tr>
@@ -46,7 +48,12 @@ const TarefaList = ({ isLoading, tarefas }) => (
 
 TarefaList.propTypes = {
     isLoading: PropTypes.bool.isRequired,
-    tarefas: PropTypes.object.isRequired,
+    tarefas: PropTypes.array.isRequired,
+};
+
+TarefaList.defaultProps = {
+    isLoading: true,
+    tarefas: [],
 };
 
 export default TarefaList;

@@ -1,5 +1,6 @@
 import * as actionTypes from '../actions/actionTypes';
 import * as api from '../actions/api';
+import axios from 'axios';
 
 export function getTarefas() {
   return dispatch => {
