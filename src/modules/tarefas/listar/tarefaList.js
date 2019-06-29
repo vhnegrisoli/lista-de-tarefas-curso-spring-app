@@ -1,7 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-
 const TarefaList = ({ isLoading, tarefas }) => (
     <div className="container">
         <div className="card">
@@ -35,7 +34,7 @@ const TarefaList = ({ isLoading, tarefas }) => (
                                     <td>{tarefa.tarefa}</td>
                                     <td>{tarefa.status}</td>
                                     <td>{tarefa.categoria.descricao}</td>
-                                    <td>{tarefa.usuarios.nome}</td>
+                                    <td>{tarefa.usuarios[0].nome}</td>
                                 </tr>
                             )
                         )}

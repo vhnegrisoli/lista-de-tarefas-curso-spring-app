@@ -16,11 +16,10 @@ export class TarefaListScreen extends React.Component {
 
     initialize() {
         this.props.getTarefas();
-        console.log(this)
     }
 
     render() {
-        return <TarefaList {...this.props} />;
+        return <TarefaList {...this.props}/>;
     }
 }
 
@@ -28,10 +27,13 @@ const mapStateToProps = (state) => {
     return {
         isLoading: state.tarefas.isLoading,
         tarefas: state.tarefas.tarefas,
+        errors: state.tarefas.errors,
     }
 };
 TarefaListScreen.propTypes = {
     getTarefas: PropTypes.func.isRequired,
+    tarefas: PropTypes.array,
+    errors: PropTypes.string,
 }
 
 const form = reduxForm({

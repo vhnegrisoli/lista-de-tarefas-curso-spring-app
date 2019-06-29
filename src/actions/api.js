@@ -4,8 +4,8 @@ const apiTarefas = 'http://localhost:8080/api/tarefas/todas';
 const apiUmaTarefa = 'http://localhost:8080/api/tarefas/buscar/';
 const apiSalvarTarefa = 'http://localhost:8080/api/tarefas/salvar';
 
-export async function getTarefas() {
-  await axios.get(apiTarefas);
+export  function getTarefas() {
+   axios.get(apiTarefas);
 };
 
 export const getUmaTarefa = id => {
