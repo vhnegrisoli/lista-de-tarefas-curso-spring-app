@@ -8,6 +8,7 @@ import { getTarefas } from '../../../actions/actions';
 
 const formName = 'tarefasListForm'
 
+
 export class TarefaListScreen extends React.Component {
     constructor(props) {
         super(props);
